@@ -32,11 +32,12 @@ export class FormComponent implements OnInit {
   }
 
   Submit() {
-    this._formData.postFormData(this.name.value, this.email.value, this.feedback.value, this.comments.value)
-      .then((msg: string) => {
-        this._snackBar.open(msg, "", {
-          duration: 2000,
-        });
+    this._formData.postFormData({name: this.name.value, email: this.email.value, feedback: this.feedback.value, comment: this.comments.value} as FormData)
+      .subscribe(res => {
+        this._snackBar.open("Sucessfully Submitted!", "", {duration: 2000});
+      },
+      error => {
+        this._snackBar.open("Some Error Occurred!", "", {duration: 2000});
       });
   }
 
