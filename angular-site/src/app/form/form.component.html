@@ -1,0 +1,47 @@
+<mat-grid-list cols="4" rowHeight="500px">
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile colspan="2">
+        <mat-card>
+            <mat-card-header>
+              <mat-card-title>Form</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput [formControl]="name">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput [formControl]="email">
+                </mat-form-field>
+
+                <br>
+
+                <mat-radio-group [formControl]="feedback">
+                    <mat-label>Feedback:</mat-label>
+                    <mat-radio-button value="Great">Great</mat-radio-button>
+                    <mat-radio-button value="Okay">Okay</mat-radio-button>
+                    <mat-radio-button value="Not Good">Not Good</mat-radio-button>
+                </mat-radio-group>
+
+                <br>
+
+                <mat-form-field appearance="outline" style="width: 100%">
+                    <mat-label>Comments</mat-label>
+                    <textarea matInput [formControl]="comments" rows="3" style="resize:none;"></textarea>
+                </mat-form-field>
+
+                <br>
+                <div style = "text-align: center;">
+                    <button mat-raised-button color="primary" (click) = "Submit()">Submit</button>
+                </div>
+            
+            </mat-card-content>
+
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+</mat-grid-list>
