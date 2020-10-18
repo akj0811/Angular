@@ -5,3 +5,15 @@
 .mat-radio-button {
     margin: 0 12px 12px;
 }
+.mat-card {
+    padding: 0;
+    border: 2px solid #000;
+}
+.mat-card-header {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+.mat-card-content {
+    margin: 30px;
+}
